@@ -1,18 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/HeaderText"
+            android:layout_gravity="center_horizontal"
+            android:textSize="50sp"
+            />
+
+        <ImageButton
+            android:id="@+id/IVTimerImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/timer"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/TVSetTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/SetTime"
+            android:layout_gravity="center"
+            android:textAppearance="@color/material_dynamic_tertiary90"
+            android:textSize="30sp"
+            />
+
+        <Button
+            android:id="@+id/BtnRunStop"
+            android:layout_marginTop="30dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:text="@string/BtnRun"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/black"
+            android:textSize="50sp"
+            />
+
+        <Chronometer
+            android:id="@+id/chronometerTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chronometerText"
+            android:textSize="48sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@color/material_dynamic_tertiary90"
+            />
+
+        <Button
+            android:id="@+id/BtnLap"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="@string/BtnTxtLap"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/black"
+            />
+        <ListView
+            android:id="@+id/LVLapList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            />
+    </LinearLayout>
+
+</ScrollView>
